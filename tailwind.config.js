@@ -10,9 +10,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: ["var(--font-montserrat)"],
+      fontFamily: {
+        monserrat: ["var(--font-monserrat)"]
+      },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit,minmax(15rem,1fr))",
+      }
     },
   },
   plugins: [],
 }
-

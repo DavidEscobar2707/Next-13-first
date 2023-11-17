@@ -5,17 +5,17 @@ export default async function Home() {
   const res = await data.json()
   return (
     <main>
-      <h1 className="text-lg py-2"> Hello next js first steps </h1>
-      
-      {res.results.map((movie) => (
-        <Movie 
-          key={movie.id}
-          id={movie.id}
-          title={movie.title}
-          poster_path={movie.poster_path}
-          release_date={movie.release_date}
-        />
-      ))}
+      <div className="grid gap-16 grid-cols-fluid">
+          {res.results.map((movie) => (
+            <Movie 
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            poster_path={movie.poster_path}
+            release_date={movie.release_date}
+            />
+          ))}
+        </div>
     </main>
   )
 }
